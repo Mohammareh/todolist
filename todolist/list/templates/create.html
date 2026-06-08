@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}New ToDo{% endblock%}
+
+{% block body %}
+    <form method="POST" action="{% url 'create' %}" class="todo-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="save-btn">Save</button>
+</form>
+{% endblock%}

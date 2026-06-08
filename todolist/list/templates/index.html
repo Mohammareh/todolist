@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}To-Do List{% endblock %}
+
+{% block body %}
+    {% for todo in todolist %}
+        <div class="todo-item">
+            <p class="todo-title">{{ todo.title }}</p>
+            <p class="todo-description">{{ todo.description }}</p>
+            
+            <!-- ✅ ONLY THIS CUSTOM CHECKBOX -->
+            <div class="todo-checkbox-wrapper">
+                <input type="checkbox" 
+                       class="todo-checkbox" 
+                       id="todo_{{ todo.pk }}"
+                       {% if todo.done %}checked{% endif %}>
+                <label for="todo_{{ todo.pk }}" class="custom-checkbox"></label>
+            </div>
+            
+            <!-- Delete button -->
+            <form action="{% url 'confirm_delete' todo.pk %}" method="post">    
+                {% csrf_token %}
+                <button class="delete-btn">Delete</button>
+            </form>
+                
+            <!-- Edit button -->
+            <form action="{% url 'edit' todo.pk %}" method="post">
+                {% csrf_token %}
+                <button name="edit" class="edit-btn">Edit</button>
+            </form>
+
+        </div>
+    {% endfor %}
+    
+    <!-- Create new ToDo button -->
+    <form action="{% url 'create' %}" method="get">    
+        <button type="submit" class="create-btn">Create</button>
+    </form>
+
+{% endblock %}

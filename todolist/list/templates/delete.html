@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Delete{% endblock%}
+
+{% block body %}
+    <div class="delete-confirmation">
+        <p>⚠️ Are you sure you want to delete "{{ todo.title }}"?</p>
+        <p style="font-size: 0.9rem; opacity: 0.8;">This action cannot be undone.</p>
+
+        <form method="POST" action="{% url 'delete' pkk %}">
+            {% csrf_token %}
+            <button type="submit" class="save-btn">Yes, Delete</button>
+        </form>
+    </div>
+{% endblock%}
