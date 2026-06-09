@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-4m*)z4o)&u@h6f7dzmod^r@6bz-*_d3#z^i1gs5gw)(by$spk%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["todolist-jx8l.onrender.com"]
+ALLOWED_HOSTS = ['todolist-jx8l.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -111,6 +111,16 @@ USE_I18N = True
 
 USE_TZ = True
 
+# CSRF settings for Render
+CSRF_TRUSTED_ORIGINS = [
+    'https://todolist-jx8l.onrender.com',
+    'https://*.onrender.com',
+]
+
+# If you're using HTTPS (which Render does)
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/

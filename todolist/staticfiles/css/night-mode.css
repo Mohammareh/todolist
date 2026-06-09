@@ -1,0 +1,140 @@
+/* Night mode styles */
+body.night-mode {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+body.night-mode header {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    color: #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Night mode version */
+.night-mode .custom-checkbox {
+    background: #2d2d2d;
+    border-color: #764ba2;
+}
+
+/* Night mode support */
+.night-mode .todo-form input[type="checkbox"] {
+    accent-color: #764ba2;
+}
+
+.night-mode .todo-checkbox:checked + .custom-checkbox {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    border-color: #764ba2;
+}
+
+.night-mode .delete-confirmation {
+    background: linear-gradient(135deg, #2d1b1b 0%, #4a1a1a 100%);
+    border: 1px solid #ff6b6b;
+    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.1);
+}
+
+.night-mode .delete-confirmation .save-btn {
+    background: #ff6b6b;
+    color: white;
+}
+
+body.night-mode .todo-form {
+    background: rgba(30, 30, 30, 0.95);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+body.night-mode .todo-item {
+    background: #2d2d2d;
+    border-left-color: #764ba2;
+}
+
+body.night-mode .todo-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.night-mode .todo-title {
+    color: #e0e0e0;
+}
+
+body.night-mode .todo-description {
+    color: #b0b0b0;
+}
+
+body.night-mode .todo-form label {
+    color: #d0d0d0;
+}
+
+body.night-mode .todo-form input[type="text"],
+body.night-mode .todo-form textarea,
+body.night-mode .todo-form select {
+    background: #1a1a1a;
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+body.night-mode .todo-form input[type="text"]:focus,
+body.night-mode .todo-form textarea:focus,
+body.night-mode .todo-form select:focus {
+    border-color: #764ba2;
+    box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.2);
+}
+
+/* Night mode button styling */
+.night-mode-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.night-mode-btn:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+body.night-mode .night-mode-btn {
+    background: rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+}
+
+body.night-mode .night-mode-btn:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+body.night-mode .create-btn {
+    background: linear-gradient(135deg, #1a1a2e 0%, #764ba2 100%);
+}
+
+body.night-mode .create-btn:hover {
+    box-shadow: 0 4px 12px rgba(118, 75, 162, 0.4);
+}
+
+body.night-mode .save-btn {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+body.night-mode .save-btn:hover {
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+body.night-mode .todo-checkbox {
+    accent-color: #764ba2;
+}
+
+body.night-mode .delete-btn {
+    background: #c53030;
+}
+
+body.night-mode .edit-btn {
+    background: #2b6cb0;
+}
